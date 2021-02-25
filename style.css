@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+body{
+    width: 100vw;
+    margin: 0;
+    font-family: Mukta;
+}
+
+
+
+.logo{
+    width: 12vw;
+}
+
+
+
+.navFlex{
+    justify-content: space-between;
+    padding: 5px;
+}
+
+
+
+.searchBar-1920, .navFlex, .buttonGroup{
+    display: flex;
+    height: 55px;
+}
+.searchBar-1920{
+    align-items: center;
+}
+.searchBar-720{
+    height: 28px;
+    width: 28px;
+    display:none;
+    border: none;
+    margin: 10.5px;
+}
+.imgSearch-1920{
+    margin-left: -25px;
+    height: 18px;
+    width: 18px;
+}
+.searchBtn-720{
+    height: 32.6px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+.imgSearch-720{
+    height: 24px;
+}
+.searchText{
+    margin: auto;
+    padding-left: 10px;
+    width: 25vw;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+
+
+.menu{
+    height: 28px;
+    width: 28px;
+}
+.hamburgerIcon{
+    border: none;
+    background-color: white;
+    cursor:pointer;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.hamburgerMenu{
+    position: absolute;
+    display:none;
+    width: 25vw; 
+    height: 100vh;
+    background: white;
+    right: 6px;
+    flex-direction: column;
+}
+
+
+
+.headerImg{
+    width: 100vw;
+}
+.menuContent{
+    display:flex;
+    border-bottom: 1px lightgray solid;
+}
+.hamburgerMenu > h2, .menuContent > img{
+   margin-left: 20px;
+}
+.menuFooter{
+    margin-top: 8vh;
+    height: 50vh;
+    width: 100%;
+    background-color: lightgray;
+}
+
+
+@media screen and (min-width: 1920px) {
+    .searchBar-1920{display: flex;}
+    .searchBar-720{display: none;}
+}
+
+@media screen and (max-width: 720px) {
+    .searchBar-1920{display: none;}
+    .searchBar-720{display: flex;}
+    .hamburgerMenu{left: 0px; top: 65px; width: 100vw;}
+}
+
+
