@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 body{
     width: 100vw;
+    overflow: hidden;
     margin: 0;
     font-family: Mukta;
 }
@@ -71,12 +72,14 @@ body{
     margin-top: 10px;
 }
 .hamburgerMenu{
+    animation-name: hamMenu;
+    animation-duration: 1s;
     position: absolute;
-    display:none;
+    display:block;
     width: 25vw; 
     height: 100vh;
+    right: -25vw;
     background: white;
-    right: 6px;
     flex-direction: column;
 }
 
@@ -98,7 +101,26 @@ body{
     width: 100%;
     background-color: lightgray;
 }
+.menuContent1:hover, .menuContent2:hover, .menuContent3:hover, .menuContent4:hover, .menuContent5:hover, .menuContent6:hover, .menuContent7:hover, .menuContent8:hover{
+    background-color: yellow;
+}
 
+@keyframes hamMenu {
+    from{
+        transform: translateX(450px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+@keyframes hamMenu2 {
+    from{
+        right: 0px;
+    }
+    to{
+        right: -450px;
+    }
+}
 
 @media screen and (min-width: 1920px) {
     .searchBar-1920{display: flex;}
