@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 body{
     width: 100vw;
-    overflow: hidden;
+    overflow: hidden visible;
+    height: 5000px;
     margin: 0;
     font-family: Mukta;
 }
@@ -60,6 +61,9 @@ body{
 
 
 
+.hamburgerMenu > h2, .menuContent > img{
+    margin-left: 20px;
+ }
 .menu{
     height: 28px;
     width: 28px;
@@ -74,37 +78,317 @@ body{
 .hamburgerMenu{
     animation-name: hamMenu;
     animation-duration: 1s;
+    z-index: 2;
     position: absolute;
-    display:block;
+    display: flex;
     width: 25vw; 
-    height: 100vh;
-    right: -25vw;
+    height: 120vh;
+    right: -50vw;
     background: white;
     flex-direction: column;
+}
+.menuContent{
+    display: flex;
+    border-bottom: 1px lightgray solid;
+}
+.menuContent:hover{
+    background-color: yellow;
+}
+.menuFooter{
+    position: absolute;
+    bottom: 0px;
+    height: 36vh;
+    width: 100%;
+    background-color: rgb(241, 241, 241);
+}
+.menuFooterImg{
+    height: 50px;
+    top: 20px;
+
+}
+.menuFooterText{
+    display: flex;
+    flex-direction: column;
+    line-height: 0.1vh;
+    top: 80px;
+}
+.menuFooterImg, .menuFooterText{
+    position: absolute;
+    left: 30px;
 }
 
 
 
 .headerImg{
-    width: 100vw;
-}
-.menuContent{
-    display:flex;
-    border-bottom: 1px lightgray solid;
-}
-.hamburgerMenu > h2, .menuContent > img{
-   margin-left: 20px;
-}
-.menuFooter{
-    margin-top: 8vh;
-    height: 50vh;
     width: 100%;
-    background-color: lightgray;
+    border:none;
+    position: absolute;
 }
-.menuContent1:hover, .menuContent2:hover, .menuContent3:hover, .menuContent4:hover, .menuContent5:hover, .menuContent6:hover, .menuContent7:hover, .menuContent8:hover{
-    background-color: yellow;
+.headerLetter3, .headerLetter6, .headerLetter12{
+    margin-right: 20px;
+}
+.headerLetter1, .headerLetter2, .headerLetter3, .headerLetter4, .headerLetter5, .headerLetter6, .headerLetter7, .headerLetter8, .headerLetter9, .headerLetter10, .headerLetter11, .headerLetter12, .headerLetter13, .headerLetter14, .headerLetter15, .headerLetter16, .headerLetter17, .headerLetter18{
+    animation-name: headerImgAnimation;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+}
+.headerLetter1{
+    width: 50px;
+}
+.headerLetter2{
+    animation-delay: .15s;
+    width: 18px;
+}.headerLetter3{
+    animation-delay: .3s;
+    width: 50px;
+}.headerLetter4{
+    animation-delay: .45s;
+    width: 50px;
+}.headerLetter5{
+    animation-delay: .6s;
+    width: 45px;
+}.headerLetter6{
+    animation-delay: .75s;
+    width: 20px;
+}.headerLetter7{
+    animation-delay: .9s;
+    width: 50px;
+}.headerLetter8{
+    animation-delay: 1.05s;
+    width: 40px;
+}.headerLetter9{
+    animation-delay: 1.2s;
+    width: 55px;
+}.headerLetter10{
+    animation-delay: 1.35s;
+    width: 55px;
+}.headerLetter11{
+    animation-delay: 1.5s;
+    width: 40px;
+}.headerLetter12{
+    animation-delay: 1.65s;
+    width: 60px;
+}.headerLetter13{
+    animation-delay: 1.8s;
+    width: 55px;
+}.headerLetter14{
+    animation-delay: 1.95s;
+    width: 55px;
+}.headerLetter15{
+    animation-delay: 2.1s;
+    width: 45px;
+}.headerLetter16{
+    animation-delay: 2.25s;
+    width: 50px;
+}.headerLetter17{
+    animation-delay: 2.4s;
+    width: 45px;
+}.headerLetter18{
+    animation-delay: 2.55s;
+    width: 50px;
 }
 
+.headerImgText{
+    opacity: 0;
+    position: relative;
+    color: white;
+    bottom: 10%;
+    text-shadow: -1.5px 1.5px 0 #9C989B,
+                          1.5px 1.5px 0 #9C989B,
+                         1.5px -1.5px 0 #9C989B,
+                        -1.5px -1.5px 0 #9C989B;
+}
+.headerImgContent{
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 672px;
+}
+.headerImgText2{
+    opacity: 0;
+    animation-name: headerImgTextAnimation;
+    animation-duration: 3.5s;
+    animation-delay: 3s;
+    position: absolute;
+    bottom: 40%;
+    color: white;
+    text-shadow: -0.8px 0.8px 0 gray,
+                          0.8px 0.8px 0 gray,
+                         0.8px -0.8px 0 gray,
+                        -0.8px -0.8px 0 gray;
+    animation-fill-mode: forwards;
+    font-size: 2ch;
+
+}
+.headerImgButton{
+    opacity: 0;
+    animation-name: headerImgButtonAnimation;
+    animation-duration: .5s;
+    animation-delay: 3.5s;
+    animation-fill-mode: forwards;
+    position: absolute;
+    bottom: 32%;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    height: 5ch;
+    width: 16ch;
+    border-radius: 3px;
+    color: white;
+    background-color: #7BC144;
+}
+.headerArrow{
+    bottom: 0;
+    width: 100%;
+    border: none;
+    z-index: 1;
+}
+
+
+
+.mainTjenester{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    
+}
+.tjenesterFlex{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.tjenester{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    flex-direction: row;
+}
+.info{
+    display: none;
+    border-radius: 4px;
+    padding: 5px;
+    padding-bottom: 15px;
+    width: 230px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    position: absolute;
+    margin-top: -26vh;
+    font-size: .85rem;
+}
+.tjenesterImg:hover ~ .info{
+   display: block;
+}
+
+
+
+.omBring{
+    background-color: #EDCB35;
+    padding: 25px;
+    padding-bottom: 75px;
+    margin-top: 30px;
+}
+.omBringImg{
+    width: 140px;
+    height: 140px;
+}
+.omBringHeader{
+    font-size: 35px;
+}
+.omBringHeaderGroup{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.omBringFlex{
+    display: flex;
+    margin: 0 auto;
+    width: 100vw;
+}
+.omBringText{
+    margin: 0 auto;
+    font-size: 18px;
+    padding: 20px;
+    width: 30vw;
+}
+.omButton{
+    width: 110px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333333;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.e-Handel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: #7BC144;
+}
+.e-HandelHeader, .e-HandelP{
+    color: white;
+}
+.e-HandelHeader{
+    font-size: 60px;
+}
+.e-HandelImg{
+    height: 240px;
+    width: 180px;
+}
+.e-HandelP{
+    text-align: center;
+    font-size: 25px;
+    width: 900px;
+}
+
+
+
+@keyframes headerImgButtonAnimation{
+    0%{
+        opacity: 0;
+        font-size: 5px;
+    }
+    33%{
+        opacity: .8;
+        font-size: 24px;
+    }
+    100%{
+        opacity: 1;
+        font-size: 20px;
+    }
+}
+@keyframes headerImgTextAnimation{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes headerImgAnimation{
+    5%{
+        opacity: 0;
+        font-size: 100px;
+    }
+    20%{
+        font-size: 90px;
+    }
+    100%{
+        
+        font-size: 80px;
+        opacity: 1;
+    }
+}
 @keyframes hamMenu {
     from{
         transform: translateX(450px);
@@ -122,15 +406,39 @@ body{
     }
 }
 
+@media screen and (max-width: 1080px) {
+}
+
 @media screen and (min-width: 1920px) {
     .searchBar-1920{display: flex;}
     .searchBar-720{display: none;}
-}
+    .hamburgerMenu{height: 40vh;}
+    .tjenesterImg{height: 240px; width: 240px;}
+    .info{width: 240px;}
 
+    .omBringFlex{flex-direction: row;}
+}
+@media screen and (min-width: 721px) and (max-width: 1080px){
+    .tjenesterImg{height: 180px; width: 180px;}
+    .info{width: 180px;}
+
+}
+@media screen and (min-width: 1081px) and (max-width: 1200px){
+    .tjenesterImg{height: 210px; width: 210px;}
+    .info{width: 210px;}
+
+}
 @media screen and (max-width: 720px) {
     .searchBar-1920{display: none;}
     .searchBar-720{display: flex;}
-    .hamburgerMenu{left: 0px; top: 65px; width: 100vw;}
+    .hamburgerMenu{left: 0px; top: 65px; width: 100vw; height: 140vh;}
+    .menuFooter{height: 40vh}
+    .tjenesterImg{height: 150px; width: 150px;}
+    .info{width: 150px;}
+    .tjenesterFlex{font-size: 12px;}
+    .maintjenester{height: 150vh;}
+    .omBringFlex{flex-direction: column;} 
+    .omBringText{width: 66vw}
 }
 
 

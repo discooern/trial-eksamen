@@ -11,7 +11,7 @@ btn.addEventListener('click', function() {
     } else {
       console.log("isOpen: ", isOpen)
        hamMenu.style.animationName = 'hamMenu2';
-       hamMenu.style.right = '-25vw';
+       hamMenu.style.right = '-400px';
        btn.style.background = 'white';
        isOpen = false;
     }
