@@ -464,6 +464,14 @@ background-color: #7BC144;
         opacity: 1;
     }
 }
+@keyframes headerImgTextAnimation3{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 @keyframes headerImgAnimation{
     5%{
         opacity: 0;
@@ -592,9 +600,11 @@ background-color: #7BC144;
     .headerImgContent{top: -40px;}
     .headerImgButton{animation-name: headerImgButtonAnimation3}
     .headerImgText{animation-name: headerImgAnimation3;}
-    .headerImgText2{animation-name: headerImgTextAnimation;}
+    .headerImgText2{animation-name: headerImgTextAnimation3;}
+    
 
         .headerLetter1{
+            margin-left: 30px;
             width: 22px;
         }.headerLetter2{
             width: 9px;
