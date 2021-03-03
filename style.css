@@ -129,7 +129,7 @@ body{
 .headerImg{
     width: 100%;
     border:none;
-    position: absolute;
+    position: relative;
 }
 .headerLetter3, .headerLetter6, .headerLetter12{
     margin-right: 20px;
@@ -199,7 +199,6 @@ body{
     display: flex;
     align-content: center;
     padding: auto;
-    
 }
 .headerImgText{
     opacity: 0;
@@ -214,7 +213,7 @@ body{
 .headerImgContent{
     z-index: 2;
     display: flex;
-    position: relative;
+    position: absolute;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -269,7 +268,6 @@ body{
     align-items: center;
     text-align: center;
     width: 100%;
-    
 }
 .tjenesterFlex{
     display: flex;
@@ -458,6 +456,14 @@ background-color: #7BC144;
         opacity: 1;
     }
 }
+@keyframes headerImgTextAnimation2{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 @keyframes headerImgAnimation{
     5%{
         opacity: 0;
@@ -534,7 +540,7 @@ background-color: #7BC144;
 @media screen and (max-width: 1081px) and (min-width: 780px){
     .headerImgButton{animation-name: headerImgButtonAnimation2}
     .headerImgText{animation-name: headerImgAnimation2;}
-    .headerImgText2{animation-name: headerImgTextAnimation;}
+    .headerImgText2{animation-name: headerImgTextAnimation2;}
         .headerLetter1{
             width: 30px;
         }.headerLetter2{
@@ -633,6 +639,7 @@ background-color: #7BC144;
         }
         .headerImgContent{
             font-size: 8px;
+            top: 25px;
         }
 }
 @media screen and (max-width: 900px) {
