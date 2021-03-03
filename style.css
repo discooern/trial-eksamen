@@ -16,8 +16,12 @@ body{
 
 
 .navFlex{
+    background-color: white;
+    z-index: 3;
     justify-content: space-between;
     padding: 5px;
+    position: sticky;
+    top: 0;
 }
 
 
@@ -49,6 +53,7 @@ body{
 }
 .imgSearch-720{
     height: 24px;
+    cursor: pointer;
 }
 .searchText{
     margin: auto;
@@ -76,20 +81,21 @@ body{
     margin-top: 10px;
 }
 .hamburgerMenu{
-    animation-name: hamMenu;
-    animation-duration: 1s;
     z-index: 2;
     position: absolute;
+    right: 0;
     display: flex;
-    width: 25vw; 
+    transform: translateX(750px);
+    transition: transform .5s ease-in;
+    width: 450px; 
     height: 120vh;
-    right: -50vw;
     background: white;
     flex-direction: column;
 }
 .menuContent{
     display: flex;
     border-bottom: 1px lightgray solid;
+    cursor: pointer;
 }
 .menuContent:hover{
     background-color: yellow;
@@ -116,6 +122,7 @@ body{
     position: absolute;
     left: 30px;
 }
+
 
 
 
@@ -188,11 +195,17 @@ body{
     width: 50px;
 }
 
+.headerAnimation{
+    display: flex;
+    align-content: center;
+    padding: auto;
+    
+}
 .headerImgText{
     opacity: 0;
     position: relative;
     color: white;
-    bottom: 10%;
+    bottom: 18%;
     text-shadow: -1.5px 1.5px 0 #9C989B,
                           1.5px 1.5px 0 #9C989B,
                          1.5px -1.5px 0 #9C989B,
@@ -201,18 +214,19 @@ body{
 .headerImgContent{
     z-index: 2;
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 672px;
+    height: 400px;
 }
 .headerImgText2{
+    margin-bottom: 40px;
     opacity: 0;
     animation-name: headerImgTextAnimation;
     animation-duration: 3.5s;
     animation-delay: 3s;
     position: absolute;
-    bottom: 40%;
     color: white;
     text-shadow: -0.8px 0.8px 0 gray,
                           0.8px 0.8px 0 gray,
@@ -228,8 +242,8 @@ body{
     animation-duration: .5s;
     animation-delay: 3.5s;
     animation-fill-mode: forwards;
+    top: 55%;
     position: absolute;
-    bottom: 32%;
     cursor: pointer;
     border: none;
     font-size: 20px;
@@ -245,6 +259,7 @@ body{
     border: none;
     z-index: 1;
 }
+
 
 
 
@@ -314,9 +329,10 @@ body{
     padding: 20px;
     width: 30vw;
 }
-.omButton{
-    width: 110px;
-    height: 40px;
+.omButton, .e-HandelBtn, .serviceBtn, .customerServiceBtn{
+    width: 12ch;
+    height: 5ch;
+    font-size: 15px;
     border: none;
     border-radius: 4px;
     background-color: #333333;
@@ -326,29 +342,68 @@ body{
 
 
 
+
+/* E-handel/Service - Styling */
 .e-Handel{
+background-color: #7BC144;
+}
+.e-Handel, .service{
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    height: 100vh;
+    height: 700px;
     width: 100%;
-    background-color: #7BC144;
 }
 .e-HandelHeader, .e-HandelP{
     color: white;
 }
-.e-HandelHeader{
+.e-HandelHeader, .serviceHeader, .customerServiceHeader{
     font-size: 60px;
 }
-.e-HandelImg{
+.e-HandelImg, .serviceP{
     height: 240px;
     width: 180px;
 }
-.e-HandelP{
+.serviceP, .e-HandelP{
+    width: 80%;
+}
+.e-HandelP, .serviceP{
     text-align: center;
     font-size: 25px;
-    width: 900px;
+}
+.serviceBtn{
+    position: relative;
+    top: -20%;
+}
+
+
+
+.customerService{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EDCB35;
+    height: 100vh;
+    width: 100%;
+}
+.customerServiceBtn{
+    margin-top: 15px;
+}
+.customerServiceImg{
+    width: 340px;
+    height: 420px;
+    margin-left: 150px;
+}
+.customerServiceFlex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.customerP{
+    width: 375px;
+}
+.customerGroup{
+    position: relative;
 }
 
 
@@ -365,6 +420,34 @@ body{
     100%{
         opacity: 1;
         font-size: 20px;
+    }
+}
+@keyframes headerImgButtonAnimation2{
+    0%{
+        opacity: 0;
+        font-size: 3px;
+    }
+    33%{
+        opacity: .8;
+        font-size: 18px;
+    }
+    100%{
+        opacity: 1;
+        font-size: 14px;
+    }
+}
+@keyframes headerImgButtonAnimation3{
+    0%{
+        opacity: 0;
+        font-size: 2px;
+    }
+    33%{
+        opacity: .8;
+        font-size: 16px;
+    }
+    100%{
+        opacity: 1;
+        font-size: 12px;
     }
 }
 @keyframes headerImgTextAnimation{
@@ -389,25 +472,36 @@ body{
         opacity: 1;
     }
 }
-@keyframes hamMenu {
-    from{
-        transform: translateX(450px);
+@keyframes headerImgAnimation2{
+    5%{
+        opacity: 0;
+        font-size: 65px;
     }
-    to{
-        transform: translateX(0px);
+    20%{
+        font-size: 55px;
+    }
+    100%{
+        
+        font-size: 45px;
+        opacity: 1;
     }
 }
-@keyframes hamMenu2 {
-    from{
-        right: 0px;
+@keyframes headerImgAnimation3{
+    5%{
+        opacity: 0;
+        font-size: 50px;
     }
-    to{
-        right: -450px;
+    20%{
+        font-size: 40px;
+    }
+    100%{
+        
+        font-size: 30px;
+        opacity: 1;
     }
 }
 
-@media screen and (max-width: 1080px) {
-}
+
 
 @media screen and (min-width: 1920px) {
     .searchBar-1920{display: flex;}
@@ -426,12 +520,130 @@ body{
 @media screen and (min-width: 1081px) and (max-width: 1200px){
     .tjenesterImg{height: 210px; width: 210px;}
     .info{width: 210px;}
+    .serviceImg{width: 220px; height: 130px;}
+}
+@media screen and (max-width: 1081px){
+    .e-HandelImg{width: 130px; height: 160px;}
+    .serviceImg{width: 200px; height: 110px;}
+    .e-HandelHeader, .serviceHeader, .customerServiceHeader{font-size: 40px;}
+    .serviceP, .customerServiceP {font-size: 20px;}
+    .e-Handel, .service{height: 550px;}
 
+    
+    }
+@media screen and (max-width: 1081px) and (min-width: 780px){
+    .headerImgButton{animation-name: headerImgButtonAnimation2}
+    .headerImgText{animation-name: headerImgAnimation2;}
+    .headerImgText2{animation-name: headerImgTextAnimation;}
+        .headerLetter1{
+            width: 30px;
+        }.headerLetter2{
+            width: 12px;
+        }.headerLetter3{
+            width: 28px;
+        }.headerLetter4{
+            width: 28px;
+        }.headerLetter5{
+            width: 25px;
+        }.headerLetter6{
+            width: 4px;
+        }.headerLetter7{
+            width: 28px;
+        }.headerLetter8{
+            width: 24px;
+        }.headerLetter9{
+            width: 30px;
+        }.headerLetter10{
+            width: 30px;
+        }.headerLetter11{
+            width: 24px;
+        }.headerLetter12{
+            width: 30px;
+        }.headerLetter13{
+            width: 32px;
+        }.headerLetter14{
+            width: 32px;
+        }.headerLetter15{
+            width: 26px;
+        }.headerLetter16{
+            width: 30px;
+        }.headerLetter17{
+            width: 24px;
+        }.headerLetter18{
+            width: 50px;
+        }
+        .headerImgContent{
+            font-size: 10px;
+        }
+        .headerImgText2{
+            top: 34%;
+        }
+        .headerImgButton{
+            top: 48%;
+        }
+}
+@media screen and (max-width: 779px) {
+    .headerImgContent{top: -40px;}
+    .headerImgButton{animation-name: headerImgButtonAnimation3}
+    .headerImgText{animation-name: headerImgAnimation3;}
+    .headerImgText2{animation-name: headerImgTextAnimation;}
+
+        .headerLetter1{
+            width: 22px;
+        }.headerLetter2{
+            width: 9px;
+        }.headerLetter3{
+            width: 10px;
+        }.headerLetter4{
+            width: 20px;
+        }.headerLetter5{
+            width: 19px;
+        }.headerLetter6{
+            width: 0px;
+        }.headerLetter7{
+            width: 20px;
+        }.headerLetter8{
+            width: 16px;
+        }.headerLetter9{
+            width: 21px;
+        }.headerLetter10{
+            width: 21px;
+        }.headerLetter11{
+            width: 18px;
+        }.headerLetter12{
+            width: 17px;
+        }.headerLetter13{
+            width: 22px;
+        }.headerLetter14{
+            width: 22px;
+        }.headerLetter15{
+            width: 18px;
+        }.headerLetter16{
+            width: 20px;
+        }.headerLetter17{
+            width: 17px;
+        }.headerLetter18{
+            width: 50px;
+        }
+        .headerImgText2{
+            top: 34%;
+        }
+        .headerImgButton{
+            top: 44%;
+        }
+        .headerImgContent{
+            font-size: 8px;
+        }
+}
+@media screen and (max-width: 900px) {
+    .customerGroup{margin: 0 auto;}
+    .customerServiceImg{width: 280px; height: 340px;}
+    .customerService{height: 830px;}
 }
 @media screen and (max-width: 720px) {
     .searchBar-1920{display: none;}
     .searchBar-720{display: flex;}
-    .hamburgerMenu{left: 0px; top: 65px; width: 100vw; height: 140vh;}
+    .hamburgerMenu{top: 65px; width: 100vw; height: 140vh;}
     .menuFooter{height: 40vh}
     .tjenesterImg{height: 150px; width: 150px;}
     .info{width: 150px;}
@@ -439,6 +651,7 @@ body{
     .maintjenester{height: 150vh;}
     .omBringFlex{flex-direction: column;} 
     .omBringText{width: 66vw}
+    .serviceBtn{margin-top: 30px;}
 }
 
 

@@ -1,20 +1,19 @@
 var btn = document.querySelector('.hamburgerIcon');
 var hamMenu = document.querySelector('.hamburgerMenu');
 let isOpen = false;
-btn.addEventListener('click', function() {
-    
-    if(!isOpen){
-       btn.style.background = 'gray';
-       hamMenu.style.animationName = 'hamMenu';
-       hamMenu.style.right = '0px';
-       isOpen = true;
-    } else {
-      console.log("isOpen: ", isOpen)
-       hamMenu.style.animationName = 'hamMenu2';
-       hamMenu.style.right = '-400px';
-       btn.style.background = 'white';
-       isOpen = false;
-    }
 
+btn.addEventListener('click', function() { 
+   let hamMenuWidth = window.getComputedStyle(hamMenu).width;
+   
+    if(!isOpen){
+      btn.style.background = 'gray';
+      hamMenu.style.transform = "translateX(0)";
+      isOpen = true;
+    } else {
+      btn.style.background = 'white';
+      hamMenu.style.transform = `translateX(${hamMenuWidth})`
+      isOpen = false;
+      console.log(hamMenuWidth)
+    }
 })
 
