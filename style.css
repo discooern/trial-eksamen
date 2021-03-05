@@ -2,7 +2,6 @@
 body{
     width: 100vw;
     overflow: hidden visible;
-    height: 5000px;
     margin: 0;
     font-family: Mukta;
 }
@@ -298,6 +297,9 @@ body{
     margin-top: -26vh;
     font-size: .85rem;
 }
+.tjenesterImg{
+    cursor: pointer;
+}
 .tjenesterImg:hover ~ .info{
    display: block;
 }
@@ -325,10 +327,9 @@ body{
 .omBringFlex{
     display: flex;
     margin: 0 auto;
-    width: 100vw;
+    width: 100%;
 }
 .omBringText{
-    margin: 0 auto;
     font-size: 18px;
     padding: 20px;
     width: 30vw;
@@ -342,6 +343,10 @@ body{
     background-color: #333333;
     color: white;
     cursor: pointer;
+}
+.omButton > a, .e-HandelBtn > a, .serviceBtn > a, .customerServiceBtn > a, .headerImgButton > a{
+    text-decoration: none;
+    color: white;
 }
 
 
@@ -382,12 +387,15 @@ background-color: #7BC144;
 
 
 
+
+
+
 .customerService{
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #EDCB35;
-    height: 100vh;
+    height: 775px;
     width: 100%;
 }
 .customerServiceBtn{
@@ -412,7 +420,74 @@ background-color: #7BC144;
 
 
 
+.job{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+    background-image: url(Img/budbil1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.job > *{
+    position: absolute;
+}
+.jobImg{
+    width: 110%;
+    z-index: -1;
+}
+.jobHeader{
+    font-size: 6rem;
+    color: white;
+}
+.jobBtn{
+    background-color: #7BC144;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    width: 16ch;
+    height: 5ch;
+    cursor: pointer;
+}
+.jobBtn > a{
+    text-decoration: none;
+    color: white;   
+}
 
+
+
+.footerContact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333333;
+    height: 700px;
+    width: 100%;
+    position: absolute;
+}
+.footerFlex{
+    display: flex;
+    max-width: 1200px;
+}
+.footerInfo{
+    margin-left: 8vh;
+    margin-right: 8vh;
+}
+.footerP{
+    width: 250px;
+}
+.footerH1, .footerP{
+    color: white;
+}
+.footerH1{
+    font-size: 42px;
+}
+.footerH2{
+    color:#7BC144;
+}
 
 
 
@@ -539,14 +614,36 @@ background-color: #7BC144;
 @media screen and (min-width: 721px) and (max-width: 1080px){
     .tjenesterImg{height: 180px; width: 180px;}
     .info{width: 180px;}
-
+    .jobHeader{font-size: 4rem;}
+    .jobBtn{font-size: 14px}
+}
+@media screen and (max-width: 813px) {
+    .customerService{height: 850px;}
+}
+@media screen and (min-width: 814px) and (max-width: 1000px) {
+    .customerService{height: 600px;}
 }
 @media screen and (min-width: 1081px) and (max-width: 1200px){
+    .info{margin-top: -180px;}
     .tjenesterImg{height: 210px; width: 210px;}
     .info{width: 210px;}
     .serviceImg{width: 220px; height: 130px;}
+    .jobHeader{font-size: 5rem;}
+    .jobBtn{font-size: 16px}
+    .customerServiceImg{width: 320px; height: 380px;}
+}
+@media screen and (min-width: 880px) and (max-width: 1080px) {
+    .info{margin-top: -200px;}
+}
+@media screen and (max-width: 879px) {
+    .info{margin-top: -250px;}
 }
 @media screen and (max-width: 1081px){
+    .footerFlex{flex-direction: column;}
+    .footerContact{height: 1150px;}
+    .job{background-position: 80%;}
+    .jobBtn{font-size: 12px}
+    .jobHeader{font-size: 3rem;}
     .e-HandelImg{width: 130px; height: 160px;}
     .serviceImg{width: 200px; height: 110px;}
     .e-HandelHeader, .serviceHeader, .customerServiceHeader{font-size: 40px;}
@@ -555,6 +652,7 @@ background-color: #7BC144;
     }
     @media screen and (min-width: 1081px){
         .headerImgContent{margin-top: 10vh;}
+
     }
 @media screen and (max-width: 1081px) and (min-width: 780px){
     .headerImgButton{animation-name: headerImgButtonAnimation2}
@@ -666,7 +764,9 @@ background-color: #7BC144;
 @media screen and (max-width: 900px) {
     .customerGroup{margin: 0 auto;}
     .customerServiceImg{width: 280px; height: 340px;}
-    .customerService{height: 830px;}
+}
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+    .customerService{height: 720px;}
 }
 @media screen and (max-width: 720px) {
     .searchBar-1920{display: none;} 
