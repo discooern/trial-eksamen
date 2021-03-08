@@ -54,6 +54,9 @@ body{
     height: 24px;
     cursor: pointer;
 }
+.searchBarImg{
+    margin-left: -30px;
+}
 .searchText{
     margin: auto;
     padding-left: 10px;
